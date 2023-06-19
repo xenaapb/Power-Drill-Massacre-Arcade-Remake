@@ -5,11 +5,13 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed = 10f;
-
+    public GameObject square ;
     // Start is called before the first frame update
     Rigidbody2D rigidbody;
 
     SpriteRenderer spriteRenderer;
+
+   
 
 
 
@@ -19,12 +21,15 @@ public class Movement : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
 
+        square.SetActive(true);
+
+
 
     }    
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Input.GetAxis("Horizontal"));
+      //  Debug.Log(Input.GetAxis("Horizontal"));
 
         rigidbody.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
 
@@ -49,4 +54,19 @@ public class Movement : MonoBehaviour
         }*/
 
     }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if (other.tag =="Darkness")
+        {
+           Debug.Log("you did it");
+           other.gameObject.SetActive(false);
+            
+        }
+        
+
+
+    }
+
+
 }
