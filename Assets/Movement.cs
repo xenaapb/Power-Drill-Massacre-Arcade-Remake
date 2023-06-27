@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
-   
+    Animator anim;
 
 
 
@@ -20,6 +20,8 @@ public class Movement : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        anim = GetComponent<Animator>();
 
         square.SetActive(true);
 
@@ -32,6 +34,15 @@ public class Movement : MonoBehaviour
       //  Debug.Log(Input.GetAxis("Horizontal"));
 
         rigidbody.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
+        
+        if(rigidbody.velocity.x != 0.0f || rigidbody.velocity.y != 0.0f)
+        {
+            anim.SetBool("Moving", true);
+        }
+        else
+        {
+            anim.SetBool("Moving", false);
+        }
 
         /*if (Input.GetKey(KeyCode.UpArrow))
         {
