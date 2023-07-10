@@ -5183,6 +5183,7 @@ GameObject:
   - component: {fileID: 2066478910}
   - component: {fileID: 2066478911}
   - component: {fileID: 2066478912}
+  - component: {fileID: 2066478913}
   m_Layer: 0
   m_Name: EnemyGFX
   m_TagString: Untagged
@@ -5281,6 +5282,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2066478913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066478909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152db54e533b1ec4f912c152ddbb3d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Respawn: 0
 --- !u!1 &2078512018
 GameObject:
   m_ObjectHideFlags: 0
