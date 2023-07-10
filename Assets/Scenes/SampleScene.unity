@@ -523,6 +523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 167050017}
   - component: {fileID: 167050016}
+  - component: {fileID: 167050018}
   m_Layer: 0
   m_Name: power drill massacre room 1
   m_TagString: Untagged
@@ -595,6 +596,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &167050018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167050015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152db54e533b1ec4f912c152ddbb3d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Respawn: 0
 --- !u!1 &171961692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2778,7 +2792,6 @@ GameObject:
   - component: {fileID: 976353859}
   - component: {fileID: 976353858}
   - component: {fileID: 976353861}
-  - component: {fileID: 976353862}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2827,7 +2840,7 @@ MonoBehaviour:
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
-  constrainInsideGraph: 0
+  constrainInsideGraph: 1
 --- !u!114 &976353859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2885,22 +2898,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 329272488}
---- !u!58 &976353862
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976353857}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1001 &981602755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5266,7 +5263,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
